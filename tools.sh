@@ -145,5 +145,16 @@ sinit () {
   srun -p short --pty bash
 }
 
+# Start a quick interactive session
+squick () {
+  srun -p short --cpus-per-task 5 --mem-per-cpu=10G --pty bash	
+}
+
+# Start a long session 
+slong () {
+	srun -p long --cpus-per-task 10 --mem-per-cpu=10G --pty bash
+}
+
+
 
 
